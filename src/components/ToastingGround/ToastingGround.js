@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Header";
+import HeaderToastingGround from "../Header/HeaderToastingGround";
 
 function ToastingGround() {
   return (
     <div>
-      <Header title="Try-My-Toaster!" fontSize={48} />
+      <HeaderToastingGround />
     </div>
   );
 }

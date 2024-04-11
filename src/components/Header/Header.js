@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 
-function Header({ title, headingLevel = 1, fontSize = 32 }) {
+function Header({ title, headingLevel = 1, fontSize = 32, children }) {
   const HeadingLvlTag = `h${headingLevel}`;
   if (typeof headingLevel !== "number" || headingLevel < 1 || headingLevel > 6)
     throw Error(
@@ -12,6 +12,7 @@ function Header({ title, headingLevel = 1, fontSize = 32 }) {
   return (
     <header>
       <HeadingLvlTag style={{ fontSize }}>{title}</HeadingLvlTag>
+      {children}
     </header>
   );
 }
