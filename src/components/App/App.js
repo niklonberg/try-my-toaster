@@ -1,7 +1,25 @@
 import React from "react";
+import Footer from "../Footer";
 
 function App() {
-  return <h1>Hello</h1>;
+  return (
+    <>
+      <Footer
+        text={
+          <p>
+            This is a challenge project as part of Joshua Comeau's{" "}
+            <b>Joy of React</b> course
+          </p>
+        }
+        address={
+          <address>
+            If you found this project interesting, check out my portfolio at{" "}
+            <a href="https://github.com/niklonberg">github.com/niklonberg</a>
+          </address>
+        }
+      />
+    </>
+  );
 }
 
 export default App;
