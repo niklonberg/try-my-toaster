@@ -1,9 +1,11 @@
 import React from "react";
+import ToastingGround from "../ToastingGround";
 import Footer from "../Footer";
 
 function App() {
   return (
     <>
+      <ToastingGround />
       <Footer
         text={
           <p>
