@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./Header";
+import styles from "./HeaderToastingGround.module.scss";
 
 function HeaderToastingGround() {
   return (
-    <Header title="Try-My-Toaster!" fontSize={48}>
-      <p>Hello</p>
-    </Header>
+    <div className={styles.wrapper}>
+      <Header title="Try-My-Toaster!" fontSize={48}></Header>
+    </div>
   );
 }
 
