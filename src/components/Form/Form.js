@@ -1,14 +1,7 @@
 import React from "react";
 
-function Form() {
-  return (
-    <form>
-      <label htmlFor="message">Message</label>
-      <textarea id="message"></textarea>
-      <label>Variant</label>
-      <input type="radio"></input>
-    </form>
-  );
+function Form({ children }) {
+  return <form>{children}</form>;
 }
 
 export default Form;
