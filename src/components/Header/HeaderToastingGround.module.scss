@@ -1,6 +1,15 @@
 .wrapper {
+  max-width: 800px;
+  min-height: 50vh;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
   background-image: url(/assets/toast.png);
-  background-size: 300px;
+  background-size: 200px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
+
+  header {
+    padding-bottom: 20px;
+  }
 }
