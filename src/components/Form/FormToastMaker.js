@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form";
 
-function FormToastingGround() {
+function FormToastMaker() {
   const [message, setMessage] = React.useState("");
   const [variant, setVariant] = React.useState("");
 
@@ -13,4 +13,4 @@ function FormToastingGround() {
   );
 }
 
-export default FormToastingGround;
+export default FormToastMaker;

@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderToastingGround from "../Header/HeaderToastingGround";
-import FormToastingGround from "../Form/FormToastingGround";
+import FormToastingGround from "../Form/FormToastMaker";
 import styles from "./ToastingGround.module.scss";
 
 function ToastingGround() {
