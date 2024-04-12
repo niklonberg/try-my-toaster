@@ -2,10 +2,11 @@ import React from "react";
 import Form from "./Form";
 
 function FormToastingGround() {
+  const [message, setMessage] = React.useState("");
+  const [variant, setVariant] = React.useState("");
+
   return (
     <Form>
-      <label htmlFor="message">Message</label>
-      <textarea id="message"></textarea>
       <label>Variant</label>
       <input type="radio"></input>
     </Form>
