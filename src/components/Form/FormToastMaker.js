@@ -2,6 +2,8 @@ import React from "react";
 import Form from "./Form";
 import Input from "../Input";
 
+import styles from "./FormToastMaker.module.scss";
+
 const ToastTypes = ["notice", "warning", "success", "error"];
 
 function FormToastMaker() {
@@ -19,14 +21,16 @@ function FormToastMaker() {
       />
       <fieldset>
         <legend>Variant</legend>
-        {ToastTypes.map((type) => (
-          <Input
-            label={type}
-            type="radio"
-            name="warning-type"
-            value={type}
-            onChange={(e) => setVariant(e.target.value)}
-          />
+        {ToastTypes.map((type, index) => (
+          <div key={index} className={styles.variantInputWrapper}>
+            <Input
+              label={type}
+              type="radio"
+              name="warning-type"
+              value={type}
+              onChange={(e) => setVariant(e.target.value)}
+            />
+          </div>
         ))}
       </fieldset>
     </Form>
