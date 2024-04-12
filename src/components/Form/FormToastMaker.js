@@ -19,19 +19,23 @@ function FormToastMaker() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <fieldset>
-        <legend>Variant</legend>
-        {ToastTypes.map((type, index) => (
-          <div key={index} className={styles.variantInputWrapper}>
-            <Input
-              label={type}
-              type="radio"
-              name="warning-type"
-              value={type}
-              onChange={(e) => setVariant(e.target.value)}
-            />
-          </div>
-        ))}
+      <fieldset className={styles.fieldset}>
+        <div>
+          <legend>Variant</legend>
+        </div>
+        <div>
+          {ToastTypes.map((type, index) => (
+            <div key={index} className={styles.variantInputWrapper}>
+              <Input
+                label={type}
+                type="radio"
+                name="warning-type"
+                value={type}
+                onChange={(e) => setVariant(e.target.value)}
+              />
+            </div>
+          ))}
+        </div>
       </fieldset>
       <button>Pop Toast!</button>
     </Form>
