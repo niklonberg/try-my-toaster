@@ -33,6 +33,7 @@ function FormToastMaker() {
           </div>
         ))}
       </fieldset>
+      <button>Pop Toast!</button>
     </Form>
   );
 }
