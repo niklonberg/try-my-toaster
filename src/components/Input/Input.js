@@ -2,7 +2,7 @@ import React from "react";
 
 function Input({ id, label, inputType, ...delegated }) {
   const generatedId = React.useId();
-  const appliedId = id | generatedId;
+  const appliedId = id || generatedId;
 
   if (inputType === "textarea")
     return (
