@@ -1,6 +1,21 @@
 $border-color: hsla(0, 0%, 0%, 0.1);
 
-.fieldset {
+.messageWrapper {
+  display: flex;
+  gap: 8px;
+
+  :first-child {
+    flex-basis: 150px;
+    text-align: right;
+  }
+
+  :last-child {
+    flex: 1;
+    resize: vertical;
+  }
+}
+
+.fieldsetWrapper {
   display: flex;
   padding: 20px 0;
   border: none;
@@ -10,20 +25,8 @@ $border-color: hsla(0, 0%, 0%, 0.1);
 
   legend {
     float: left;
-  }
-}
-
-.messageWrapper {
-  display: flex;
-  gap: 8px;
-
-  :first-child {
     flex-basis: 150px;
-  }
-
-  :last-child {
-    flex: 1;
-    resize: vertical;
+    text-align: right;
   }
 }
 

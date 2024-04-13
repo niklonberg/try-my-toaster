@@ -21,7 +21,7 @@ function FormToastMaker() {
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
-      <fieldset className={styles.fieldset}>
+      <fieldset className={styles.fieldsetWrapper}>
         <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
           {ToastTypes.map((type, index) => (
