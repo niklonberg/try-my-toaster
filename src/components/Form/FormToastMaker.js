@@ -12,7 +12,7 @@ function FormToastMaker() {
 
   return (
     <Form>
-      <div className={styles.messageWrapper}>
+      <div className={`${styles.row} ${styles.messageWrapper}`}>
         <Input
           id={"toast-message"}
           label={"Message"}
@@ -21,7 +21,7 @@ function FormToastMaker() {
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
-      <fieldset className={styles.fieldsetWrapper}>
+      <fieldset className={`${styles.row} ${styles.fieldsetWrapper}`}>
         <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
           {ToastTypes.map((type, index) => (
@@ -37,7 +37,12 @@ function FormToastMaker() {
           ))}
         </div>
       </fieldset>
-      <button>Pop Toast!</button>
+      <div className={styles.row}>
+        <div></div>
+        <div>
+          <button>Pop Toast!</button>
+        </div>
+      </div>
     </Form>
   );
 }

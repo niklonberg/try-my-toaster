@@ -1,41 +1,44 @@
 $border-color: hsla(0, 0%, 0%, 0.1);
 
-.messageWrapper {
+.row {
   display: flex;
   gap: 8px;
 
-  :first-child {
+  > :first-child {
     flex-basis: 150px;
+  }
+
+  > :last-child {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+.messageWrapper {
+  > :first-child {
     text-align: right;
   }
 
-  :last-child {
-    flex: 1;
-    min-width: 200px;
+  > :last-child {
     resize: vertical;
   }
 }
 
 .fieldsetWrapper {
-  display: flex;
   padding: 20px 0;
   border: none;
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
-  gap: 8px;
 
   legend {
     float: left;
-    flex-basis: 150px;
     text-align: right;
   }
 }
 
 .variantOptionsWrapper {
-  flex: 1;
   display: flex;
   flex-wrap: wrap;
-  min-width: 200px;
   gap: 32px;
 }
 
