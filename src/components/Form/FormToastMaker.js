@@ -12,17 +12,17 @@ function FormToastMaker() {
 
   return (
     <Form>
-      <Input
-        id={"toast-message"}
-        label={"Message"}
-        inputType={"textarea"}
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+      <div className={styles.messageWrapper}>
+        <Input
+          id={"toast-message"}
+          label={"Message"}
+          inputType={"textarea"}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
       <fieldset className={styles.fieldset}>
-        <div>
-          <legend>Variant</legend>
-        </div>
+        <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
           {ToastTypes.map((type, index) => (
             <div key={index} className={styles.variantInputWrapper}>
