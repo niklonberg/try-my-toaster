@@ -7,6 +7,10 @@ $border-color: hsla(0, 0%, 0%, 0.1);
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
   gap: 8px;
+
+  legend {
+    float: left;
+  }
 }
 
 .variantOptionsWrapper {
