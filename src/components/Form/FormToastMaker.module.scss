@@ -1,14 +1,23 @@
 $border-color: hsla(0, 0%, 0%, 0.1);
 
-.variantInputWrapper {
-  display: inline-flex;
-  flex-direction: row-reverse;
-}
-
 .fieldset {
   display: flex;
   padding: 20px 0;
   border: none;
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
+  gap: 8px;
+}
+
+.variantOptionsWrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.variantInputWrapper {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 8px;
 }

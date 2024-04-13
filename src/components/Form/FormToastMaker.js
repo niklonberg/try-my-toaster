@@ -23,7 +23,7 @@ function FormToastMaker() {
         <div>
           <legend>Variant</legend>
         </div>
-        <div>
+        <div className={styles.variantOptionsWrapper}>
           {ToastTypes.map((type, index) => (
             <div key={index} className={styles.variantInputWrapper}>
               <Input
