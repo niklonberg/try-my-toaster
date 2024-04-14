@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderToastingGround from "../Header/HeaderToastingGround";
 import FormToastMaker from "../Form/FormToastMaker";
+import Toast from "../Toast";
+
 import styles from "./ToastingGround.module.scss";
 
 function ToastingGround() {
@@ -12,12 +14,12 @@ function ToastingGround() {
     setToasts(nextToasts);
   }
 
-  console.log({ toasts });
+  console.log(toasts);
   return (
     <div className={styles.wrapper}>
       <HeaderToastingGround />
       {toasts.map((toast) => (
-        <div>{toast.message}</div>
+        <Toast toast={toast} />
       ))}
       <FormToastMaker handleAddToastSubmit={handleAddToastSubmit} />
     </div>
