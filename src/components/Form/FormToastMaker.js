@@ -29,7 +29,8 @@ function FormToastMaker() {
               <Input
                 label={type}
                 type="radio"
-                name="warning-type"
+                name="toast-type"
+                id={type}
                 value={type}
                 checked={variant === type}
                 onChange={(e) => setVariant(e.target.value)}
