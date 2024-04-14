@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderToastingGround from "../Header/HeaderToastingGround";
-import FormToastingGround from "../Form/FormToastMaker";
+import FormToastMaker from "../Form/FormToastMaker";
 import styles from "./ToastingGround.module.scss";
 
 function ToastingGround() {
@@ -16,7 +16,7 @@ function ToastingGround() {
     <div className={styles.wrapper}>
       <HeaderToastingGround />
 
-      <FormToastingGround handleAddToast={handleAddToast} />
+      <FormToastMaker handleAddToast={handleAddToast} />
     </div>
   );
 }
