@@ -31,10 +31,12 @@ function FormToastMaker() {
                 type="radio"
                 name="warning-type"
                 value={type}
+                checked={variant === type}
                 onChange={(e) => setVariant(e.target.value)}
               />
             </div>
           ))}
+          <p>Checked value: {variant || "undefined"}</p>
         </div>
       </fieldset>
       <div className={styles.row}>
