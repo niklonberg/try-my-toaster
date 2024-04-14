@@ -24,19 +24,20 @@ function FormToastMaker() {
       <fieldset className={`${styles.row} ${styles.fieldsetWrapper}`}>
         <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
-          {ToastTypes.map((type, index) => (
+          {ToastTypes.map((option, index) => (
             <div key={index} className={styles.variantInputWrapper}>
               <Input
-                label={type}
+                label={option}
                 type="radio"
                 name="toast-type"
-                id={type}
-                value={type}
-                checked={variant === type}
+                id={option}
+                value={option}
+                checked={variant === option}
                 onChange={(e) => setVariant(e.target.value)}
               />
             </div>
           ))}
+          <p>Message: {message || "undefined"}</p>
           <p>Checked value: {variant || "undefined"}</p>
         </div>
       </fieldset>
