@@ -1,18 +1,9 @@
 import React from "react";
 import styles from "./Form.module.scss";
 
-function Form({ children, callback }) {
-  function defaultSubmit() {
-    console.log("form submitted");
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    (callback || defaultSubmit)();
-  }
-
+function Form({ submitCallback, children }) {
   return (
-    <form onSubmit={handleSubmit} className={styles.wrapper}>
+    <form onSubmit={submitCallback} className={styles.wrapper}>
       {children}
     </form>
   );
