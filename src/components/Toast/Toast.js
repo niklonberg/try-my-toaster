@@ -1,12 +1,14 @@
 import React from "react";
 import { X } from "react-feather";
 
+import styles from "./Toast.module.scss";
+
 function Toast({ toast }) {
   const { variant, message } = toast;
   return (
-    <div>
-      <svg></svg>
-      <span>{variant}</span>
+    <div className={styles.wrapper}>
+      {/* <svg></svg> */}
+      <span>IconVariantHere</span>
       <span>{message}</span>
       <button>
         <X />
