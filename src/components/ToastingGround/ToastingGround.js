@@ -16,7 +16,9 @@ function ToastingGround() {
   return (
     <div className={styles.wrapper}>
       <HeaderToastingGround />
-
+      {toasts.map((toast) => (
+        <div>{toast.message}</div>
+      ))}
       <FormToastMaker handleAddToastSubmit={handleAddToastSubmit} />
     </div>
   );
