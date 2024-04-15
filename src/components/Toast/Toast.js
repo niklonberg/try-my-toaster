@@ -9,12 +9,21 @@ import {
 
 import styles from "./Toast.module.scss";
 
+const ICONS_BY_VARIANT = {
+  notice: Info,
+  success: CheckCircle,
+  error: AlertOctagon,
+  warning: AlertTriangle,
+};
+
 function Toast({ toast }) {
   const { variant, message } = toast;
+  const VariantIcon = ICONS_BY_VARIANT[variant];
+
   return (
     <div className={`${styles.toast} ${styles[variant]}`}>
       <div className={styles.iconWrapper}>
-        <Info size={24} />
+        <VariantIcon size={24} />
       </div>
       <p className={styles.message}>{message}</p>
       <button className={styles.iconBtn}>
