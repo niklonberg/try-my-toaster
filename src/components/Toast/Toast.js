@@ -6,6 +6,7 @@ import {
   AlertOctagon,
   AlertTriangle,
 } from "react-feather";
+import VisuallyHidden from "../VisuallyHidden";
 
 import styles from "./Toast.module.scss";
 
@@ -28,6 +29,7 @@ function Toast({ toast, handleDismissToast }) {
       <p className={styles.message}>{message}</p>
       <button onClick={() => handleDismissToast(id)} className={styles.iconBtn}>
         <X size={24} />
+        <VisuallyHidden>Dismiss notification</VisuallyHidden>
       </button>
     </div>
   );
