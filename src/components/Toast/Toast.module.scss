@@ -10,11 +10,19 @@
   gap: 16px;
 }
 
-.iconWrapper,
-.iconBtn {
+.iconWrapper {
   flex-shrink: 0;
 }
 
 .message {
   flex: 1;
+  font-weight: bold;
+}
+
+.iconBtn {
+  flex-shrink: 0;
+  padding: 16px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
