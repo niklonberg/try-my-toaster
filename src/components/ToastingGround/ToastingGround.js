@@ -17,8 +17,9 @@ function ToastingGround() {
     setToasts(nextToasts);
   }
 
-  function handleDismissToast() {
-    console.log("i ran");
+  function handleDismissToast(toastId) {
+    const nextToasts = [...toasts].filter((toast) => toast.id !== toastId);
+    setToasts(nextToasts);
   }
 
   console.log(toasts);
