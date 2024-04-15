@@ -4,7 +4,7 @@ import Input from "../Input";
 
 import styles from "./FormToastMaker.module.scss";
 
-const ToastTypes = ["notice", "warning", "success", "error"];
+const TOAST_TYPES = ["notice", "warning", "success", "error"];
 
 function FormToastMaker({ handleAddToastSubmit }) {
   const [message, setMessage] = React.useState("");
@@ -24,7 +24,7 @@ function FormToastMaker({ handleAddToastSubmit }) {
       <fieldset className={`${styles.row} ${styles.fieldsetWrapper}`}>
         <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
-          {ToastTypes.map((option, index) => (
+          {TOAST_TYPES.map((option, index) => (
             <div key={index} className={styles.variantInputWrapper}>
               <Input
                 label={option}
