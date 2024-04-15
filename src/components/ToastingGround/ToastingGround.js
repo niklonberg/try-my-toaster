@@ -8,8 +8,7 @@ import styles from "./ToastingGround.module.scss";
 function ToastingGround() {
   const [toasts, setToasts] = React.useState([]);
 
-  function handleAddToastSubmit(e, variant, message) {
-    e.preventDefault();
+  function handleAddToast(variant, message) {
     const nextToasts = [
       ...toasts,
       { id: crypto.randomUUID(), variant, message },
@@ -27,7 +26,7 @@ function ToastingGround() {
     <div className={styles.wrapper}>
       <HeaderToastingGround />
       <ToastDrawer toasts={toasts} handleDismissToast={handleDismissToast} />
-      <FormToastMaker handleAddToastSubmit={handleAddToastSubmit} />
+      <FormToastMaker handleAddToast={handleAddToast} />
     </div>
   );
 }

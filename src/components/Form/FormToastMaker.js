@@ -6,12 +6,18 @@ import styles from "./FormToastMaker.module.scss";
 
 const TOAST_TYPES = ["notice", "warning", "success", "error"];
 
-function FormToastMaker({ handleAddToastSubmit }) {
+function FormToastMaker({ handleAddToast }) {
   const [message, setMessage] = React.useState("");
   const [variant, setVariant] = React.useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    handleAddToast(variant, message);
+    setMessage("");
+  }
+
   return (
-    <Form submitCallback={(e) => handleAddToastSubmit(e, variant, message)}>
+    <Form submitCallback={(e) => handleSubmit(e)}>
       <div className={`${styles.row} ${styles.messageWrapper}`}>
         <Input
           id={"toast-message"}
