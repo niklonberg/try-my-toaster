@@ -10,9 +10,14 @@ function ToastingGround() {
 
   function handleAddToastSubmit(e, variant, message) {
     e.preventDefault();
-    const nextToasts = [...toasts, { variant, message }];
+    const nextToasts = [
+      ...toasts,
+      { id: crypto.randomUUID(), variant, message },
+    ];
     setToasts(nextToasts);
   }
+
+  function handleDismissToast() {}
 
   console.log(toasts);
   return (
