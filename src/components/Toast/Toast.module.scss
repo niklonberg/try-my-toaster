@@ -1,3 +1,5 @@
+@import "/src/variables.scss";
+
 .toast {
   max-width: 100%;
   width: 300px;
@@ -27,17 +29,33 @@
 }
 
 .notice {
-  background-color: white;
-}
+  background-color: $color-notice-bg;
 
-.success {
-  background-color: green;
-}
-
-.error {
-  background-color: red;
+  .iconWrapper {
+    color: $color-notice;
+  }
 }
 
 .warning {
-  background-color: yellow;
+  background-color: $color-warning-bg;
+
+  .iconWrapper {
+    color: $color-warning;
+  }
+}
+
+.success {
+  background-color: $color-success-bg;
+
+  .iconWrapper {
+    color: $color-success;
+  }
+}
+
+.error {
+  background-color: $color-error-bg;
+
+  .iconWrapper {
+    color: $color-error;
+  }
 }
