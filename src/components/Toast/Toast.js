@@ -12,14 +12,13 @@ import styles from "./Toast.module.scss";
 function Toast({ toast }) {
   const { variant, message } = toast;
   return (
-    <div className={styles.wrapper}>
-      <svg></svg>
-      <span>{message}</span>
-      <button>
-        <X />
-      </button>
-      <button>
-        <AlertTriangle />
+    <div className={styles.toast}>
+      <div className={styles.iconWrapper}>
+        <Info size={24} />
+      </div>
+      <p className={styles.message}>{message}</p>
+      <button className={styles.iconBtn}>
+        <X size={24} />
       </button>
     </div>
   );
