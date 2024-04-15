@@ -1,9 +1,11 @@
 import React from "react";
 import Toast from "../Toast";
 
+import styles from "./ToastDrawer.module.scss";
+
 function ToastDrawer({ toasts, handleDismissToast }) {
   return (
-    <ol>
+    <ol className={styles.toastsWrapper}>
       {toasts.map((toast) => (
         <li>
           <Toast
