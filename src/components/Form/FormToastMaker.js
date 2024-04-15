@@ -8,13 +8,13 @@ const TOAST_TYPES = ["notice", "warning", "success", "error"];
 
 function FormToastMaker({ handleAddToast }) {
   const [message, setMessage] = React.useState("");
-  const [variant, setVariant] = React.useState("");
+  const [variant, setVariant] = React.useState(TOAST_TYPES[0]);
 
   function handleSubmit(e) {
     e.preventDefault();
     handleAddToast(variant, message);
     setMessage("");
-    setVariant("notice");
+    setVariant(TOAST_TYPES[0]);
   }
 
   return (
