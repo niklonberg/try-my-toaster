@@ -16,7 +16,7 @@ const ICONS_BY_VARIANT = {
   warning: AlertTriangle,
 };
 
-function Toast({ toast }) {
+function Toast({ toast, handleDismissToast }) {
   const { variant, message } = toast;
   const VariantIcon = ICONS_BY_VARIANT[variant];
 
@@ -26,7 +26,7 @@ function Toast({ toast }) {
         <VariantIcon size={24} />
       </div>
       <p className={styles.message}>{message}</p>
-      <button className={styles.iconBtn}>
+      <button onClick={handleDismissToast} className={styles.iconBtn}>
         <X size={24} />
       </button>
     </div>

@@ -17,13 +17,15 @@ function ToastingGround() {
     setToasts(nextToasts);
   }
 
-  function handleDismissToast() {}
+  function handleDismissToast() {
+    console.log("i ran");
+  }
 
   console.log(toasts);
   return (
     <div className={styles.wrapper}>
       <HeaderToastingGround />
-      <ToastDrawer toasts={toasts} />
+      <ToastDrawer toasts={toasts} handleDismissToast={handleDismissToast} />
       <FormToastMaker handleAddToastSubmit={handleAddToastSubmit} />
     </div>
   );
