@@ -3,15 +3,17 @@ import Toast from "../Toast";
 
 function ToastDrawer({ toasts, handleDismissToast }) {
   return (
-    <div>
+    <ol>
       {toasts.map((toast) => (
-        <Toast
-          key={toast.id}
-          toast={toast}
-          handleDismissToast={handleDismissToast}
-        />
+        <li>
+          <Toast
+            key={toast.id}
+            toast={toast}
+            handleDismissToast={handleDismissToast}
+          />
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }
 
