@@ -14,6 +14,7 @@ function FormToastMaker({ handleAddToast }) {
     e.preventDefault();
     handleAddToast(variant, message);
     setMessage("");
+    setVariant("notice");
   }
 
   return (
