@@ -31,19 +31,22 @@ function FormToastMaker({ handleAddToast }) {
       <fieldset className={`${styles.row} ${styles.fieldsetWrapper}`}>
         <legend>Variant</legend>
         <div className={styles.variantOptionsWrapper}>
-          {TOAST_TYPES.map((option, index) => (
-            <div key={index} className={styles.variantInputWrapper}>
-              <Input
-                label={option}
-                type="radio"
-                name="toast-type"
-                id={option}
-                value={option}
-                checked={variant === option}
-                onChange={(e) => setVariant(e.target.value)}
-              />
-            </div>
-          ))}
+          {TOAST_TYPES.map((option) => {
+            const inputId = `variant-${option}`;
+            return (
+              <div key={inputId} className={styles.variantInputWrapper}>
+                <Input
+                  label={option}
+                  type="radio"
+                  name="toast-type"
+                  id={inputId}
+                  value={option}
+                  checked={variant === option}
+                  onChange={(e) => setVariant(e.target.value)}
+                />
+              </div>
+            );
+          })}
         </div>
       </fieldset>
       <div className={styles.row}>
