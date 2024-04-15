@@ -12,7 +12,7 @@ import styles from "./Toast.module.scss";
 function Toast({ toast }) {
   const { variant, message } = toast;
   return (
-    <div className={styles.toast}>
+    <div className={`${styles.toast} ${styles[variant]}`}>
       <div className={styles.iconWrapper}>
         <Info size={24} />
       </div>
