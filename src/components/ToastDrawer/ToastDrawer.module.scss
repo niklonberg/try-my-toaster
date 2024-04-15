@@ -10,3 +10,14 @@
     margin-bottom: 16px;
   }
 }
+
+.slideIn {
+  animation: toast 800ms cubic-bezier(0, 0.46, 0, 0.92) both;
+  will-change: transform;
+}
+
+@keyframes toast {
+  from {
+    transform: translateX(100%);
+  }
+}

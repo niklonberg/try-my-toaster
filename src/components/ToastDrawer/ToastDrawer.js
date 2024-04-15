@@ -7,7 +7,7 @@ function ToastDrawer({ toasts, handleDismissToast }) {
   return (
     <ol className={styles.toastsWrapper}>
       {toasts.map((toast) => (
-        <li>
+        <li className={styles.slideIn}>
           <Toast
             key={toast.id}
             toast={toast}
