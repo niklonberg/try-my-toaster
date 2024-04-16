@@ -1,10 +1,11 @@
 import React from "react";
+import ToastProvider from "../ToastProvider";
 import ToastingGround from "../ToastingGround";
 import Footer from "../Footer";
 
 function App() {
   return (
-    <>
+    <ToastProvider>
       <ToastingGround />
       <Footer
         text={
@@ -20,7 +21,7 @@ function App() {
           </address>
         }
       />
-    </>
+    </ToastProvider>
   );
 }
 

@@ -1,12 +1,14 @@
 import React from "react";
 import Form from "./Form";
 import Input from "../Input";
+import { ToastContext } from "../ToastProvider";
 
 import styles from "./FormToastMaker.module.scss";
 
 const TOAST_TYPES = ["notice", "warning", "success", "error"];
 
-function FormToastMaker({ handleAddToast }) {
+function FormToastMaker() {
+  const { handleAddToast } = React.useContext(ToastContext);
   const [message, setMessage] = React.useState("");
   const [variant, setVariant] = React.useState(TOAST_TYPES[0]);
 
