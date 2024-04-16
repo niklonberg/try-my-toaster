@@ -9,8 +9,8 @@ function ToastDrawer() {
   return (
     <ol className={styles.toastsWrapper}>
       {toasts.map((toast) => (
-        <li className={styles.slideIn}>
-          <Toast key={toast.id} toast={toast} />
+        <li key={toast.id} className={styles.slideIn}>
+          <Toast toast={toast} />
         </li>
       ))}
     </ol>
