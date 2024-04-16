@@ -23,6 +23,7 @@ function FormToastMaker() {
     <Form submitCallback={(e) => handleSubmit(e)}>
       <div className={`${styles.row} ${styles.messageWrapper}`}>
         <Input
+          required
           id={"toast-message"}
           label={"Message"}
           inputType={"textarea"}
