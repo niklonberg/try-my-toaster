@@ -24,6 +24,7 @@ function FormToastMaker() {
       <div className={`${styles.row} ${styles.messageWrapper}`}>
         <Input
           required
+          styles={{ minHeight: "60px" }}
           id={"toast-message"}
           label={"Message"}
           inputType={"textarea"}
