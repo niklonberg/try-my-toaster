@@ -5,7 +5,18 @@ import { ToastContext } from "../ToastProvider";
 import styles from "./ToastDrawer.module.scss";
 
 function ToastDrawer() {
-  const { toasts } = React.useContext(ToastContext);
+  const { toasts, setToasts } = React.useContext(ToastContext);
+
+  React.useEffect(() => {
+    function handleEscapeKey(e) {
+      if (e.key === "Escape") setToasts([]);
+    }
+
+    window.addEventListener("keydown", handleEscapeKey);
+
+    return () => window.removeEventListener("keydown", handleEscapeKey);
+  }, [setToasts]);
+
   return (
     <ol className={styles.toastsWrapper}>
       {toasts.map((toast) => (

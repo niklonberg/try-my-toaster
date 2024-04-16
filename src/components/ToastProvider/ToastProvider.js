@@ -22,6 +22,7 @@ function ToastProvider({ children }) {
     <ToastContext.Provider
       value={{
         toasts,
+        setToasts,
         handleAddToast,
         handleDismissToast,
       }}
