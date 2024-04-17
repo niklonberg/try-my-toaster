@@ -47,3 +47,20 @@ $border-color: hsla(0, 0%, 0%, 0.1);
   flex-direction: row-reverse;
   gap: 8px;
 }
+
+.popToastBtn {
+  padding: 6px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(274, 50%, 47%),
+    hsl(255, 50%, 28%)
+  );
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid hsl(0, 0%, 0%);
+  }
+}

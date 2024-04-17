@@ -56,7 +56,7 @@ function FormToastMaker() {
       <div className={styles.row}>
         <div></div>
         <div>
-          <button>Pop Toast!</button>
+          <button className={styles.popToastBtn}>Pop Toast!</button>
         </div>
       </div>
     </Form>
