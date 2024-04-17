@@ -23,6 +23,12 @@ function Toast({ toast }) {
   const { id, variant, message } = toast;
   const VariantIcon = ICONS_BY_VARIANT[variant];
 
+  React.useEffect(() => {
+    const timeoutId = window.setTimeout(() => handleDismissToast(id), 8000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [handleDismissToast, id]);
+
   return (
     <div className={`${styles.toast} ${styles[variant]}`}>
       <div className={styles.iconWrapper}>
