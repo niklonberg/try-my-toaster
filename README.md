@@ -19,6 +19,8 @@ Toasts are accessible - read by screen reader, after current focus is finished r
 Escape key dismisses all notifications. Toasts are otherwise focusable via button component.  
 Toasts auto dismiss after 8 seconds.  
 Context provider for toasters, so toasts can be accessed and rendered from different places.
+Custom 'use-keydown' hook, which can be used in a component to quickly add some functionality  
+on keydown event, with a specified key and callback function that then executes.
 
 ## Credits
 
