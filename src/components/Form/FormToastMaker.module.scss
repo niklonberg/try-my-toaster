@@ -63,4 +63,8 @@ $border-color: hsla(0, 0%, 0%, 0.1);
   &:focus {
     outline: 2px solid hsl(0, 0%, 0%);
   }
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
