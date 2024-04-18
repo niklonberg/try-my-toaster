@@ -1,4 +1,16 @@
 .wrapper {
   text-align: center;
-  background-color: red;
+  color: hsl(0, 50%, 92%);
+  background-color: hsl(0, 68%, 42%);
+  padding-block: 20px;
+
+  a {
+    background-color: hsl(0, 43%, 84%);
+    padding: 2px 6px;
+    margin-left: 5px;
+    border-radius: 4px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 }

@@ -16,7 +16,8 @@ function App() {
         }
         address={
           <address>
-            If you found this project interesting, check out my portfolio at{" "}
+            If you found this interesting, I'd love if you checked out my other
+            projects at{" "}
             <a href="https://github.com/niklonberg">github.com/niklonberg</a>
           </address>
         }
