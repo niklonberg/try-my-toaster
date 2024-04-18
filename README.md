@@ -6,6 +6,9 @@ be used to create notifications of different kinds.
 
 All html structure, components, logic, react state management and scss styling made by myself.
 
+## Page
+This site is hosted via netlify, and can be found here: https://transcendent-cendol-8ed904.netlify.app/
+
 ## Design spec
 
 ![design specification for app](design-spec.png)
